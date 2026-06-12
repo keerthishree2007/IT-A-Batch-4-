@@ -1,0 +1,56 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int total = 0;
+
+        System.out.println("===== FOOD MENU =====");
+        System.out.println("1. Mango Juice      - Rs.50");
+        System.out.println("2. Orange Juice     - Rs.40");
+        System.out.println("3. Apple Juice      - Rs.60");
+        System.out.println("4. Vanilla Ice Cream - Rs.30");
+        System.out.println("5. Chocolate Ice Cream - Rs.40");
+        System.out.println("6. Veg Biriyani     - Rs.120");
+
+        System.out.print("How many dishes do you want to order? ");
+        int n = sc.nextInt();
+
+        for (int i = 1; i <= n; i++) {
+            System.out.print("\nEnter dish number: ");
+            int choice = sc.nextInt();
+
+            System.out.print("Enter quantity: ");
+            int qty = sc.nextInt();
+
+            switch (choice) {
+                case 1:
+                    total += 50 * qty;
+                    break;
+                case 2:
+                    total += 40 * qty;
+                    break;
+                case 3:
+                    total += 60 * qty;
+                    break;
+                case 4:
+                    total += 30 * qty;
+                    break;
+                case 5:
+                    total += 40 * qty;
+                    break;
+                case 6:
+                    total += 120 * qty;
+                    break;
+                default:
+                    System.out.println("Invalid dish number!");
+            }
+        }
+
+        System.out.println("\n===== BILL =====");
+        System.out.println("Total Amount = Rs." + total);
+
+        sc.close();
+    }
+}
