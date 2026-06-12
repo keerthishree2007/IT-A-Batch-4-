@@ -1,0 +1,10 @@
+public class Main {
+    public static void main(String[] args) {
+        String str = "I love Java";
+
+        String newStr = str.replace("Java", "Python");
+
+        System.out.println("Original String: " + str);
+        System.out.println("New String: " + newStr);
+    }
+}
