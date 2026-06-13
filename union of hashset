@@ -1,0 +1,15 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        int a[] = {1, 2, 3};
+        int b[] = {3, 4, 5};
+
+        HashSet<Integer> set = new HashSet<>();
+
+        for (int n : a) set.add(n);
+        for (int n : b) set.add(n);
+
+        System.out.println(set);
+    }
+}
