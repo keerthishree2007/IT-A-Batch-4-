@@ -1,0 +1,27 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        int a[] = {1, 2, 3, 2};
+        int b[] = {2, 1, 2, 3};
+
+        HashMap<Integer, Integer> map = new HashMap<>();
+
+        for (int n : a)
+            map.put(n, map.getOrDefault(n, 0) + 1);
+
+        for (int n : b)
+            map.put(n, map.getOrDefault(n, 0) - 1);
+
+        boolean equal = true;
+
+        for (int value : map.values()) {
+            if (value != 0) {
+                equal = false;
+                break;
+            }
+        }
+
+        System.out.println(equal ? "Arrays are Equal" : "Arrays are Not Equal");
+    }
+}
