@@ -1,0 +1,21 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        HashMap<String, Long> phoneBook = new HashMap<>();
+
+        phoneBook.put("Keerthi", 9876543210L);
+        phoneBook.put("Arun", 9876543211L);
+        phoneBook.put("Priya", 9876543212L);
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter name: ");
+        String name = sc.nextLine();
+
+        if (phoneBook.containsKey(name))
+            System.out.println("Phone Number: " + phoneBook.get(name));
+        else
+            System.out.println("Contact not found");
+    }
+}
